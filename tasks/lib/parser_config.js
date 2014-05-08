@@ -11,12 +11,16 @@ module.exports = {
     {
       splitters: ['<script '],
       rgx: new RegExp(/data-main=['"](?!\w*?:?\/\/)([^'"\{]+)['"].*\/?>/i)
+    },
+    {
+      splitters: ['<script '],
+      rgx: new RegExp(/data-worker=['"](?!\w*?:?\/\/)([^'"\{]+)['"].*\/?>/i)
     }
   ],
   regcss: new RegExp(/url\(([^)]+)\)/ig),
-  
+
   regcssfilter: new RegExp(/filter[\w\.\:]+\(src=['"]([^'"]+)['"]/ig),
-  
+
   supportedTypes: {
     html: 'html',
     css: 'css',
